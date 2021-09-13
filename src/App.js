@@ -1,22 +1,32 @@
-import { Container, Row, Col, Navbar } from 'react-bootstrap'
-import logo from './logo.svg'
+import { Container, Row, Col } from 'react-bootstrap'
+
+import WeatherCard from './components/WeatherCard'
+import WeatherNav from './components/WeatherNav'
 
 function App() {
   return (
-    <Container fluid="md">
-      <Navbar.Brand href="#home">
-        <img
-          src={logo}
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-          alt="React logo"
-        />
-      </Navbar.Brand>
-      <Row>
-        <Col>1 of 1</Col>
-      </Row>
-    </Container>
+    <section className="vh-100" style={{ backgroundColor: '#eee' }}>
+      <WeatherNav/>
+      <Container fluid="md">
+        <Row className="d-flex justify-content-center align-items-center h-100">
+          <Col>
+            <WeatherCard />
+          </Col>
+          <Col>
+            <WeatherCard />
+          </Col>
+          <Col>
+            <WeatherCard />
+          </Col>
+          <Col>
+            <WeatherCard />
+          </Col>
+          <Col>
+            <WeatherCard />
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }
 
