@@ -1,0 +1,19 @@
+// TODO: Mocking getData is not stable, need to investigate
+
+import { renderHook } from '@testing-library/react-hooks'
+import useFetch, { getData } from '../useFetch'
+
+  jest.mock('../useFetch', () => ({
+    __esModule: true,
+    ...jest.requireActual('../useFetch'),
+    getData: jest.fn()
+  }))
+ 
+test('should return the data from api', async () => {
+  const mockApi = jest.fn()
+  getData.mockResolvedValue(1)
+  const { unmount, result } = renderHook(({ val }) => useFetch(mockApi, val), { initialProps: { val: 1}})
+  expect(result.current).toStrictEqual({ error: null, isLoading: true, response: null })
+  expect(unmount).not.toThrow()
+})
+

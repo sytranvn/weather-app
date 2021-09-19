@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/hooks/__tests__/.useFetch.test.js."  ]
 }
