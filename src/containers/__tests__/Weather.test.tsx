@@ -1,11 +1,10 @@
 import { render } from '@testing-library/react'
 
 import Weather from '../Weather'
-import useFetch from '../../hooks/useFetch'
+import { useFetch } from '../../hooks/useFetch'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 
-// const mockUseFetchFn = jest.fn()
 jest.mock('../../hooks/useFetch')
 
 describe('Search', () => {
@@ -25,7 +24,7 @@ describe('Search', () => {
       isLoading: true,
     })
     const { getByText } = setup()
-    expect(getByText('Loading...')).toBeInTheDocument()
+    expect(getByText('Loading weather forcast...')).toBeInTheDocument()
   })
 
   test('renders loading', () => {

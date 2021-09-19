@@ -23,6 +23,7 @@ describe('Mask', () => {
       color: 'white',
     })
   })
+
   test('renders light cloud day', () => {
     const { container } = render(<Mask weatherCode={Weather.LIGHT_CLOUD} />)
     expect(container.firstChild).toHaveStyle({

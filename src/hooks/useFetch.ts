@@ -62,7 +62,7 @@ export async function getData<T>(
   }
 }
 
-export default function useFetch<T>(api: ApiFunc<T>, params: any) {
+export function useFetch<T>(api: ApiFunc<T>, params: any) {
   const [result, dispatch] = useReducer(reducer, initialState)
   useEffect(() => {
     const abortController = new AbortController()
