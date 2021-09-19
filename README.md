@@ -1,5 +1,5 @@
-![example workflow](https://github.com/sytranvn/weather-app/actions/workflows/main.yml/badge.svg)
-
+![CI workflow](https://github.com/sytranvn/weather-app/actions/workflows/main.yml/badge.svg)
+[![.github/workflows/cov.yml](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml/badge.svg?branch=master)](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml)
 # Available Scripts
 
 In the project directory, you can run:

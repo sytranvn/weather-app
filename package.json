@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "cover": "react-scripts test --coverage",
+    "cover": "npm test -- --coverage --watchAll=false --coverageDirectory=coverage",
     "eject": "react-scripts eject",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose"
   },
@@ -53,7 +53,8 @@
       "src/*.{js,jsx,ts,tsx}",
       "src/**/*.{js,jsx,ts,tsx}",
       "!./node_modules/",
-      "!./src/index.js"
+      "!./src/index.js",
+      "!./src/react-app-env.d.ts"
     ],
     "coverageThreshold": {
       "global": {
@@ -64,7 +65,7 @@
       }
     },
     "coverageReporters": [
-      "text"
+      "text", "clover"
     ]
   },
   "devDependencies": {
