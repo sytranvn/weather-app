@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import WeatherSearch from './WeatherSearch'
+import WeatherSearch from './Search'
 
 export default function WeatherNav() {
   return (
