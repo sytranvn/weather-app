@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/sytranvn/weather-app/branch/master/graph/badge.svg?token=3WOYSE8KTO)](https://codecov.io/gh/sytranvn/weather-app)
 
 # About
+[**Live demo**](https://sytranvn.as.r.appspot.com/)  
 Simple web app to check weather status in 5 day. Weather data is provided by https://www.metaweather.com .
 ## Structure
 ![structure](./public/images/structure.jpg)
