@@ -1,11 +1,10 @@
 import { render } from '@testing-library/react'
 
 import Locations from '../Locations'
-import useFetch from '../../hooks/useFetch'
+import { useFetch } from '../../hooks/useFetch'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 
-// const mockUseFetchFn = jest.fn()
 jest.mock('../../hooks/useFetch')
 
 describe('Search', () => {

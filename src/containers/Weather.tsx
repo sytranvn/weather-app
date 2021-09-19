@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { getLocation, LocationDetail } from '../api/location'
 import ErrorView from '../components/ErrorView'
 import WeatherCard from '../components/WeatherCard'
-import useFetch from '../hooks/useFetch'
+import { useFetch } from '../hooks/useFetch'
 
 interface RouteParams {
   woeid: string
@@ -16,7 +16,7 @@ export default function Weather() {
   if (isLoading) {
     return (
       <Row className="d-flex justify-content-center align-items-center h-100">
-        <Col>Loading...</Col>
+        <Col>Loading weather forcast...</Col>
       </Row>
     )
   }

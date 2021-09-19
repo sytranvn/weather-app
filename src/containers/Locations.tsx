@@ -1,5 +1,5 @@
 import { ListGroup, Row, Col } from 'react-bootstrap'
-import useFetch from '../hooks/useFetch'
+import { useFetch } from '../hooks/useFetch'
 import { Location, searchLocations } from '../api/location'
 import ErrorView from '../components/ErrorView'
 import LocationItem from '../components/LocationItem'
