@@ -1,5 +1,6 @@
 ![Build](https://github.com/sytranvn/weather-app/actions/workflows/main.yml/badge.svg)
 [![Coverage](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml/badge.svg?branch=master)](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml)
+[![codecov](https://codecov.io/gh/sytranvn/weather-app/branch/master/graph/badge.svg?token=3WOYSE8KTO)](https://codecov.io/gh/sytranvn/weather-app)
 # Available Scripts
 
 In the project directory, you can run:
@@ -9,10 +10,10 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `yarn test`
+
+### `yarn cover`
+Run test and report coverage
 
 ### `yarn build`
 

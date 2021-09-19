@@ -1,4 +1,4 @@
-name: Codecov
+name: Coverage
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -23,8 +23,6 @@ jobs:
       - uses: codecov/codecov-action@v2.1.0
         with:
           # Comma-separated list of files to upload
-          files: # optional
-            - clover.xml
-          directory: # optional
-            - coverage
+          files: clover.xml
+          directory: coverage
           working-directory: # optional
