@@ -1,3 +1,5 @@
+![example workflow](https://github.com/sytranvn/weather-app/actions/workflows/main.yml/badge.svg)
+
 # Available Scripts
 
 In the project directory, you can run:
