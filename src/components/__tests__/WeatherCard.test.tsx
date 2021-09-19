@@ -56,49 +56,44 @@ test('render WeatherCard', () => {
       class="mb-3 card"
       style="border-radius: 10px;"
     >
+      <img
+        alt="Heavy Cloud"
+        class="w-100"
+        src="/images/cloud_night.jpg"
+        srcset="/images/cloud_night_small.jpg 640w"
+      />
       <div
-        class="bg-image ripple"
-        style="border-top-left-radius: 10px; border-top-right-radius: 10px;"
+        class="c0"
       >
-        <img
-          alt="Heavy Cloud"
-          class="w-100"
-          src="/images/cloud_night.jpg"
-          srcset="/images/cloud_night_small.jpg 640w"
-        />
         <div
-          class="c0"
+          class="text-center text-white pt-2"
         >
-          <div
-            class="text-center text-white pt-2"
+          <p
+            class="h4 mb-4"
           >
-            <p
-              class="h4 mb-4"
-            >
-              Heavy Cloud
-            </p>
-            <p
-              class="h6 mb-4"
-            >
-              New York
-              , 
-              New York
-            </p>
-            <p
-              class="h6 mb-4"
-            >
-              September 18, 2021
-            </p>
-            <p
-              class="display-5"
-            >
-              <strong>
-                25
-                °C
-              </strong>
-               
-            </p>
-          </div>
+            Heavy Cloud
+          </p>
+          <p
+            class="h6 mb-4"
+          >
+            New York
+            , 
+            New York
+          </p>
+          <p
+            class="h6 mb-4"
+          >
+            September 18, 2021
+          </p>
+          <p
+            class="display-5"
+          >
+            <strong>
+              25
+              °C
+            </strong>
+             
+          </p>
         </div>
       </div>
       <div
