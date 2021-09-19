@@ -1,6 +1,6 @@
 import { ListGroupItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { Location } from '../api'
+import { Location } from '../api/location'
 
 interface ItemProps {
   location: Location

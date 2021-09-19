@@ -1,6 +1,12 @@
 {
   "name": "weather-app",
   "version": "0.1.0",
+  "author":{
+    "email": "sytrancsvn@gmail.com",
+    "name": "Sy Tran",
+    "url": "https://sytranvn.dev"
+  },
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -22,7 +28,8 @@
     "test": "react-scripts test",
     "cover": "npm test -- --coverage --watchAll=false --coverageDirectory=coverage",
     "eject": "react-scripts eject",
-    "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose"
+    "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
+    "setup-dev": "husky install"
   },
   "proxy": "https://www.metaweather.com",
   "eslintConfig": {
@@ -43,11 +50,6 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn test"
-    }
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/*.{js,jsx,ts,tsx}",
@@ -65,7 +67,8 @@
       }
     },
     "coverageReporters": [
-      "text", "clover"
+      "text",
+      "clover"
     ]
   },
   "devDependencies": {
@@ -76,6 +79,7 @@
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.1",
     "@types/react": "^17.0.21",
+    "@types/react-bootstrap": "^0.32.26",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.9",
     "@types/styled-components": "^5.1.14",
