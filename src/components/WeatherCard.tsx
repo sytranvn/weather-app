@@ -1,50 +1,51 @@
-import { Card, Image } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faCog } from '@fortawesome/free-solid-svg-icons'
+import { Card } from 'react-bootstrap'
+
+import { ConsolicatedWeather, Location } from '../api'
+import { Time } from '../constants'
 
 import Mask from './Mask'
+import WeatherCardBody from './WeatherCardBody'
+import WeatherCardHeader from './WeatherCardHeader'
 
-export default function WeatherCard() {
+interface WeatherCardProps {
+  consolidatedWeather: ConsolicatedWeather
+  location: Location
+  parent: Location
+  sunRise?: string
+  sunSet?: string
+}
+
+export default function WeatherCard({ consolidatedWeather, location, parent }: WeatherCardProps) {
   return (
     <Card style={{ borderRadius: '10px' }} className="mb-3">
       <div
         className="bg-image ripple"
-        data-mdb-ripple-color="light"
         style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
       >
-        <Image
-          src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-weather/draw2.png"
-          className="w-100"
-          alt="night"
-        />
-        <Mask>
-          <div className="d-flex justify-content-between p-4">
-            <FontAwesomeIcon icon={faChevronLeft} size="lg" className="text-white" />
-            <FontAwesomeIcon icon={faCog} size="lg" className="text-white" />
-          </div>
-          <div className="text-center text-white">
-            <p className="h4 mb-4">Clear night</p>
-            <p className="h6 mb-4">Detroit, US</p>
+        <WeatherCardHeader weatherCode={consolidatedWeather.weather_state_abbr} />
+        <Mask weatherCode={consolidatedWeather.weather_state_abbr} time={Time.DAY}>
+          <div className="text-center text-white pt-2">
+            <p className="h4 mb-4">{consolidatedWeather.weather_state_name}</p>
+            <p className="h6 mb-4">
+              {location.title}, {parent.title}
+            </p>
+            <p className="h6 mb-4">
+              {new Date(consolidatedWeather.applicable_date).toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
             <p className="display-5">
-              <strong>20°C</strong>{' '}
+              <strong>{consolidatedWeather.the_temp.toFixed(0)}°C</strong>{' '}
             </p>
           </div>
         </Mask>
       </div>
-      <div className="card-body p-4 text-center">
-        <div className="d-flex justify-content-between mb-3">
-          <p className="h6 fw-normal">Max</p>
-          <p className="h6 fw-normal">
-            <i className="fas fa-sun pe-2" /> 23°C
-          </p>
-        </div>
-        <div className="d-flex justify-content-between" style={{ color: '#aaa' }}>
-          <p className="h6 fw-normal">Min</p>
-          <p className="h6 fw-normal">
-            <i className="fas fa-cloud pe-2" /> 21°C
-          </p>
-        </div>
-      </div>
+      <WeatherCardBody
+        maxTemp={consolidatedWeather.max_temp}
+        minTemp={consolidatedWeather.min_temp}
+      />
     </Card>
   )
 }
