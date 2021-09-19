@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap'
 
-import { ConsolicatedWeather, Location } from '../api'
+import { ConsolicatedWeather, Location } from '../api/location'
 import { Time } from '../constants'
 
 import Mask from './Mask'
