@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 
 import Weather from '../Weather'
-import { useFetch } from '../../hooks/useFetch'
+import useFetch from '../../hooks/useFetch'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 
 import Locations from '../Locations'
-import { useFetch } from '../../hooks/useFetch'
+import useFetch from '../../hooks/useFetch'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 

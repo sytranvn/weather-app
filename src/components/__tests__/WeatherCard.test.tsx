@@ -33,7 +33,13 @@ test('render WeatherCard', () => {
     latt_long: '42.855350,-76.501671',
   }
   const { container, getByText } = render(
-    <WeatherCard consolidatedWeather={consolidatedWeather} location={location} parent={parent} />
+    <WeatherCard
+      consolidatedWeather={consolidatedWeather}
+      location={location}
+      parent={parent}
+      sunRise="2021-09-19T05:42:38.783919+07:00"
+      sunSet="2021-09-19T17:51:26.426747+07:00"
+    />
   )
 
   expect(getByText('Heavy Cloud')).toBeInTheDocument()
@@ -55,9 +61,10 @@ test('render WeatherCard', () => {
         style="border-top-left-radius: 10px; border-top-right-radius: 10px;"
       >
         <img
-          alt="night"
+          alt="Heavy Cloud"
           class="w-100"
-          src="/images/clear_night.png"
+          src="/images/cloud_night.jpg"
+          srcset="/images/cloud_night_small.jpg 640w"
         />
         <div
           class="c0"

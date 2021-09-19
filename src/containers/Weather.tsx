@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { getLocation, LocationDetail } from '../api/location'
 import ErrorView from '../components/ErrorView'
 import WeatherCard from '../components/WeatherCard'
-import { useFetch } from '../hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 
 interface RouteParams {
   woeid: string

@@ -11,18 +11,29 @@ interface WeatherCardProps {
   consolidatedWeather: ConsolicatedWeather
   location: Location
   parent: Location
-  sunRise?: string
-  sunSet?: string
+  sunRise: string
+  sunSet: string
 }
 
-export default function WeatherCard({ consolidatedWeather, location, parent }: WeatherCardProps) {
+export default function WeatherCard({
+  consolidatedWeather,
+  location,
+  parent,
+  sunRise,
+  sunSet,
+}: WeatherCardProps) {
   return (
     <Card style={{ borderRadius: '10px' }} className="mb-3">
       <div
         className="bg-image ripple"
         style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
       >
-        <WeatherCardHeader weatherCode={consolidatedWeather.weather_state_abbr} />
+        <WeatherCardHeader
+          weather={consolidatedWeather.weather_state_name}
+          weatherCode={consolidatedWeather.weather_state_abbr}
+          sunRise={sunRise}
+          sunSet={sunSet}
+        />
         <Mask weatherCode={consolidatedWeather.weather_state_abbr} time={Time.DAY}>
           <div className="text-center text-white pt-2">
             <p className="h4 mb-4">{consolidatedWeather.weather_state_name}</p>
