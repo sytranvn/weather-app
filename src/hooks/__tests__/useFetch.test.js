@@ -1,8 +1,6 @@
 import { useState as useStateMock } from 'react'
 import { renderHook } from '@testing-library/react-hooks'
-import { act } from 'jest'
 import { useFetch } from '../useFetch'
-import { doesNotThrow } from 'assert'
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),

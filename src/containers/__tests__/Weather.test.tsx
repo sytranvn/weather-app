@@ -49,7 +49,7 @@ describe('Search', () => {
             applicable_date: '2021-09-24',
             min_temp: 23.619999999999997,
             max_temp: 28.625,
-            the_temp: 26.55
+            the_temp: 26.55,
           },
         ],
         time: '2021-09-19T10:56:25.963334+07:00',
