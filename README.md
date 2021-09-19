@@ -1,3 +1,5 @@
+![Build](https://github.com/sytranvn/weather-app/actions/workflows/main.yml/badge.svg)
+[![Coverage](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml/badge.svg?branch=master)](https://github.com/sytranvn/weather-app/actions/workflows/cov.yml)
 # Available Scripts
 
 In the project directory, you can run:
